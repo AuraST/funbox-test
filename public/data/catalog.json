@@ -1,0 +1,25 @@
+[
+  {
+    "fill": "фуа-гра",
+    "countPortion": "10 порций",
+    "gift": "мышь",
+    "countKg": "0,5",
+    "text": "Чего сидишь? Порадуй котэ, <button class='item-choose' type='button'>купи</button>"
+  },
+  {
+    "fill": "рыбой",
+    "countPortion": "40 порций",
+    "gift": "2 мыши",
+    "countKg": "2",
+    "text": "Головы щучьи с чесноком да свежайшая сёмгушка."
+  },
+  {
+    "fill": "курой",
+    "countPortion": "100 порций",
+    "gift": "5 мыши",
+    "add": "заказчик доволен",
+    "countKg": "5",
+    "text": "Печалька, с курой закончился.",
+    "active": "false"
+  }
+]
