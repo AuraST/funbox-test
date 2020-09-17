@@ -7,12 +7,12 @@
           Нямушка <br>
           <span class="catalog-item__title--small">с {{ catalogItem.fill }}</span>
         </p>
-        <p class="catalog-item__info" v-if="catalogItem.countPortion">{{ catalogItem.countPortion }}</p>
-        <p class="catalog-item__info" v-if="catalogItem.gift">{{ catalogItem.gift }} в подарок</p>
+        <p class="catalog-item__info" v-if="catalogItem.countPortion"><span class='text--bold' v-html="catalogItem.countPortion"></span> порций</p>
+        <p class="catalog-item__info" v-if="catalogItem.gift"><span v-html="catalogItem.gift"></span> в подарок</p>
         <p class="catalog-item__info" v-if="catalogItem.add">{{ catalogItem.add }}</p>
       </div>
       <div class="catalog-item__bottom">
-        {{ catalogItem.countKg }} кг
+        <div class="catalog-item__param"><span class="catalog-item__param-count">{{ catalogItem.countKg }}</span><br> кг</div>
       </div>
     </div>
     <div class="catalog-item__other" v-html="catalogItem.text"></div>

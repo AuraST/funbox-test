@@ -1,6 +1,126 @@
 .catalog-list {
-    display: grid;
-    grid-template-columns: repeat(3, 320px);
-    grid-gap: 80px;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  grid-gap: 80px;
+  justify-content: center;
+}
+
+.catalog-list {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.23rem;
+  color: var(--gray);
+}
+
+.catalog-item {
+  position: relative;
+}
+
+.catalog-item__block {
+  position: relative;
+  display: grid;
+  grid-template-rows: 45% 55%;
+  min-height: 480px;
+  margin-bottom: 15px;
+  border: 4px solid var(--blue);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.catalog-item__block:hover {
+  border-color: var(--pink);
+  transition: border .3s;
+}
+
+.catalog-item__block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: -30px;
+  padding: 30px;
+  box-shadow: 0 0 0 560px var(--white);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.catalog-item--disabled .catalog-item__block {
+  filter: grayscale(1);
+}
+
+.catalog-item--disabled .catalog-item__block > * {
+  filter: opacity(0.15);
+}
+
+.catalog-item__top {
+  padding: 20px 50px;
+}
+
+.catalog-item__title {
+  margin-bottom: 15px;
+  font-size: 3.69rem;
+  font-weight: bold;
+  color: var(--black);
+  line-height: 2.5rem;
+}
+
+.catalog-item__title--small {
+  font-size: 1.846rem;
+}
+
+.catalog-item__info {
+  margin-bottom: 5px;
+  font-size: 1.077rem;
+  line-height: 1rem;
+}
+
+.catalog-item__bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background: url("../images/cat.png") no-repeat;
+  background-position: 65% 0;
+  background-size: auto;
+}
+
+.catalog-item__param {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  font-size: 1.615rem;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 50%;
+}
+
+.catalog-item__block:hover .catalog-item__param {
+  background-color: var(--pink);
+}
+
+.catalog-item__param-count {
+  font-size: 3.23rem;
+}
+
+.catalog-item__other {
+  font-size: 1rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.catalog-item__other .catalog-item__choose {
+  display: inline;
+  padding: 0;
+  color: var(--blue);
+  background: none;
+  border: none;
+  border-bottom: 1px dashed;
+}
+
+.catalog-item__other .catalog-item__choose:hover {
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.catalog-item--disabled .catalog-item__other {
+  color: var(--yellow);
 }

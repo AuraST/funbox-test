@@ -1,3 +1,12 @@
+:root {
+    --blue: #1698d9;
+    --pink: #d91667;
+    --yellow: #ffff66;
+    --gray: #666666;
+    --white: #ffffff;
+    --black: #000000;
+}
+
 html {
     font-size: 13px;
     color: #fff;
@@ -16,4 +25,8 @@ h2 {
 
 p {
     margin-top: 0;
+}
+
+.text--bold {
+    font-weight: bold;
 }
