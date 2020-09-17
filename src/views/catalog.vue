@@ -1,5 +1,12 @@
 <template>
-  <catalogItem :catalogItem="catalogList" />
+  <main class="main">
+    <div class="catalog">
+      <h2>Ты сегодня покормил кота?</h2>
+      <div class="catalog-list">
+        <catalogItem v-for="item in catalogList" :key="item" :catalogItem="item" />
+      </div>
+    </div>
+  </main>
 </template>
 
 <script>
@@ -24,3 +31,7 @@
     }
   }
 </script>
+
+<style>
+  @import '../assets/styles/catalog.css';
+</style>

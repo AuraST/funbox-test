@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import catalog from '@/components/catalog'
+import catalog from '@/views/catalog'
 
 export default {
   name: 'App',
