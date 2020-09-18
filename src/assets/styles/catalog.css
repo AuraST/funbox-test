@@ -1,10 +1,17 @@
 .main {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    height: 100vh;
-    align-items: center;
-    background-image: url(../images/back.png);
-    background-color: #0c0c0c;
-    background-position: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  align-items: center;
+  background-image: url(../images/back.png);
+  background-color: #0c0c0c;
+  background-position: center;
+}
+
+@media screen and (max-width: 991px) {
+  .main {
+    height: auto;
+    padding: 10px;
+  }
 }
