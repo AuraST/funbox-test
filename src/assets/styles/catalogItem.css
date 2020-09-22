@@ -24,11 +24,14 @@
   overflow: hidden;
 }
 
-.catalog-item__card:hover,
-.catalog-item__card:focus {
+.catalog-item__card:hover {
   background-color: var(--pink);
   transition: background-color .2s;
   cursor: pointer;
+}
+
+.catalog-item__card:focus {
+  outline: 1px solid var(--white);
 }
 
 .catalog-item__card::before {

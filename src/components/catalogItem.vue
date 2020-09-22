@@ -1,6 +1,6 @@
 <template>
-  <li :class="['catalog-item', { 'catalog-item--disabled' : catalogItem.active }]">
-    <div :class="[ 'catalog-item__card', { 'catalog-item__card--choose' : catalogItem.selected === true }]" @click="onClickItem">
+  <li :class="['catalog-item', { 'catalog-item--disabled' : catalogItem.disabled }]">
+    <div :class="[ 'catalog-item__card', { 'catalog-item__card--choose' : catalogItem.selected === true }]" @click="onClickItem" @keyup.space="onClickItem" tabindex="0">
       <div class="catalog-item__block">
         <div class="catalog-item__top">
           <p class="catalog-item__text">Сказачное заморское яство</p>
@@ -23,7 +23,10 @@
       </div>
     </div>
     <div class="catalog-item__other">
-      <p class="catalog-item__other-text" v-html="catalogItem.text"></p>
+      <p class="catalog-item__other-text">
+        {{ catalogItem.text }}
+        <button class="catalog-item__choose" type="button" @click="onClickItem">{{ catalogItem.control }}</button>
+      </p>
     </div>
   </li>
 </template>
