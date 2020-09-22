@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "fill": "фуа-гра",
     "countPortion": "10",
     "gift": "мышь",
@@ -7,6 +8,7 @@
     "text": "Чего сидишь? Порадуй котэ, <button class='catalog-item__choose' type='button'>купи</button>"
   },
   {
+    "id": 2,
     "fill": "рыбой",
     "countPortion": "40",
     "gift": "<span class='text--bold'>2</span> мыши",
@@ -14,6 +16,7 @@
     "text": "Головы щучьи с чесноком да свежайшая сёмгушка."
   },
   {
+    "id": 3,
     "fill": "курой",
     "countPortion": "100",
     "gift": "<span class='text--bold'>5</span> мышей",

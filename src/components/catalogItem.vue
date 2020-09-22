@@ -1,6 +1,6 @@
 <template>
-  <div :class="['catalog-item', { 'catalog-item--disabled' : catalogItem.active }]">
-    <div class="catalog-item__card">
+  <li :class="['catalog-item', { 'catalog-item--disabled' : catalogItem.active }]">
+    <div :class="[ 'catalog-item__card', { 'catalog-item__card--choose' : catalogItem.selected === true }]" @click="onClickItem">
       <div class="catalog-item__block">
         <div class="catalog-item__top">
           <p class="catalog-item__text">Сказачное заморское яство</p>
@@ -25,13 +25,18 @@
     <div class="catalog-item__other">
       <p class="catalog-item__other-text" v-html="catalogItem.text"></p>
     </div>
-  </div>
+  </li>
 </template>
 
 <script>
 export default {
   name: 'catalogItem',
-  props: ['catalogItem']
+  props: ['catalogItem', 'onClick'],
+  methods: {
+    onClickItem() {
+      this.onClick(this.catalogItem)
+    }
+  }
 }
 </script>
 

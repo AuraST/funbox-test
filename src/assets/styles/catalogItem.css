@@ -3,9 +3,8 @@
   flex-wrap: wrap;
   grid-gap: 80px;
   justify-content: center;
-}
-
-.catalog-list {
+  margin: 0;
+  padding: 0;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 1.23rem;
   color: var(--gray);
@@ -13,6 +12,7 @@
 
 .catalog-item {
   position: relative;
+  list-style: none;
 }
 
 .catalog-item__card {
@@ -24,7 +24,8 @@
   overflow: hidden;
 }
 
-.catalog-item__card:hover {
+.catalog-item__card:hover,
+.catalog-item__card:focus {
   background-color: var(--pink);
   transition: background-color .2s;
   cursor: pointer;
@@ -41,6 +42,10 @@
   clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
   border-radius: 6px;
   z-index: -1;
+}
+
+.catalog-item__card--choose {
+  background-color: var(--pink);
 }
 
 .catalog-item__block {
@@ -97,7 +102,8 @@
   border-radius: 50%;
 }
 
-.catalog-item__block:hover .catalog-item__param {
+.catalog-item__block:hover .catalog-item__param,
+.catalog-item__card--choose .catalog-item__param {
   background-color: var(--pink);
   transition: background-color .2s;
 }
