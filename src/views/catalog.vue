@@ -32,7 +32,7 @@
     methods: {
       chooseItem(selectedItem) {
         this.catalogList = this.catalogList.map(item => {
-          if (selectedItem.id === item.id && !item.active) {
+          if (selectedItem.id === item.id && !item.disabled) {
             item.selected = !item.selected
           }
           return item
